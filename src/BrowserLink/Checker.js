@@ -11,7 +11,7 @@
     _project = project;
   }
 
-  function runAxe(results) {
+  function runAxe(err, results) {
 
     results.project = _project;
 
@@ -37,16 +37,23 @@
 
   function getSourceMap(element) {
     try {
-      return browserLink.sourceMapping.getCompleteRange(element);
+        var rng = browserLink.sourceMapping.getCompleteRange(element);
+        var paths = browserLink.sourceMapping.getAllSourcePaths(element)
+        return rng;
     } catch (e) {
       return null;
     }
   }
 
   function check() {
-    setTimeout(function () {
-      var json = JSON.parse(_options);
-      axe.a11yCheck(document, json, runAxe);
+      setTimeout(function () {
+          if (_options === null || _options.length < 3) {
+            axe.run(document, runAxe);  // run all rules
+        } else {
+            var json = JSON.parse(_options);
+            axe.run(document, json, runAxe);
+        }
+      
     }, 2000);
   }
 

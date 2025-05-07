@@ -17,15 +17,21 @@ namespace WebAccessibilityChecker
         [DefaultValue(true)]
         public bool RunOnPageLoad { get; set; } = true;
 
+        [Category("General")]
+        [DisplayName("rules file")]
+        [Description("the name of the rules file to use or clear to run all axe-core rules")]
+        [DefaultValue("axe-rules.json")]
+        public string RulesFile { get; set; } = "axe-rules.json";
+
         [Category("Severity")]
         [DisplayName("Show warnings")]
-        [Description("Shows accessibility errors classified as warnings.")]
+        [Description("Shows accessibility errors classified as warnings (axe severity = major)")]
         [DefaultValue(true)]
         public bool ShowWarnings { get; set; } = true;
 
         [Category("Severity")]
         [DisplayName("Show messages")]
-        [Description("Shows accessibility errors classified as informational messages.")]
+        [Description("Shows accessibility errors classified as informational messages (axe severity = minor)")]
         [DefaultValue(false)]
         public bool ShowMessages { get; set; }
     }

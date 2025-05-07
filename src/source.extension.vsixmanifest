@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="25a79d25-0fff-4748-afaa-3a67ed116bc9" Version="1.5" Language="en-US" Publisher="Mads Kristensen" />
-        <DisplayName>Web Accessibility Checker</DisplayName>
-        <Description xml:space="preserve">The easiest way to perform accessibility checks on any ASP.NET web application. Fully customizable and support all the major international accessibility standards.</Description>
+        <Identity Id="F3A70276-0754-428D-A26E-3A782BD9DACC" Version="1.0" Language="en-US" Publisher="Mads Kristensen" />
+        <DisplayName>Web Accessibility Checker 2022</DisplayName>
+        <Description xml:space="preserve">Perform accessibility checks on any ASP.NET web application. Fully customizable and supports all the major international accessibility standards using axe-core.</Description>
         <MoreInfo>https://github.com/madskristensen/WebAccessibilityChecker</MoreInfo>
         <License>Resources\LICENSE</License>
         <ReleaseNotes>https://github.com/madskristensen/WebAccessibilityChecker/blob/master/CHANGELOG.md</ReleaseNotes>
@@ -12,11 +12,19 @@
         <Tags>web, accessibility, a11y, wcag, section 508, wai, asp.net, axe</Tags>
     </Metadata>
     <Installation>
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0,17.0)" />
-    </Installation>
+		<InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0,)">
+			<ProductArchitecture>amd64</ProductArchitecture>
+		</InstallationTarget>
+		<InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[17.0,)">
+			<ProductArchitecture>amd64</ProductArchitecture>
+		</InstallationTarget>
+		<InstallationTarget Id="Microsoft.VisualStudio.Enterprise" Version="[17.0,)">
+			<ProductArchitecture>amd64</ProductArchitecture>
+		</InstallationTarget>
+	</Installation>
     <Prerequisites>
-        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,)" DisplayName="Visual Studio core editor" />
-        <Prerequisite Id="Microsoft.VisualStudio.Component.Web" Version="[15.0,)" DisplayName="Web development tools" />
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,)" DisplayName="Visual Studio core editor" />
+        <Prerequisite Id="Microsoft.VisualStudio.Component.Web" Version="[17.0,)" DisplayName="Web development tools" />
     </Prerequisites>
     <Assets>
         <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />

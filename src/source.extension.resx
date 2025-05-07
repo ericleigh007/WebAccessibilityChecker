@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="110" xml:space="preserve">
-    <value>Web Accessibility Checker</value>
+    <value>Web Accessibility Checker 2022</value>
   </data>
   <data name="112" xml:space="preserve">
-    <value>The easiest way to perform accessibility checks on any ASP.NET web application. Fully customizable and support all the major international accessibility standards.</value>
+    <value>Perform accessibility checks on any ASP.NET web application. Fully customizable and supports all the major international accessibility standards using axe-core.</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="400" type="System.Resources.ResXFileRef, System.Windows.Forms">

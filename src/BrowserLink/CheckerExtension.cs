@@ -54,7 +54,7 @@ namespace WebAccessibilityChecker
         {
             var dir = new DirectoryInfo(connection.Project.GetRootFolder());
             string folder = FindConfigFolder(dir);
-            string file = Path.Combine(folder, Constants.ConfigFileName);
+            string file = Path.Combine(folder, VSPackage.Options.RulesFile);
             string options = "{}";
 
             if (File.Exists(file))
